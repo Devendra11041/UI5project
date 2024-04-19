@@ -1,0 +1,65 @@
+<mvc:View
+    controllerName="com.app.project1.controller.Home"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+>
+    <VBox class="sapUiSmallMargin">
+        <form:SimpleForm
+            id="SimpleFormChange354"
+            editable="true"
+            layout="ResponsiveGridLayout"
+            title="Employee Details"
+            labelSpanXL="3"
+            labelSpanL="3"
+            labelSpanM="3"
+            labelSpanS="12"
+            adjustLabelSpan="false"
+            emptySpanXL="4"
+            emptySpanL="4"
+            emptySpanM="4"
+            emptySpanS="0"
+            columnsXL="1"
+            columnsL="1"
+            columnsM="1"
+            singleContainerFullSize="false"
+        >
+            <Label
+                id="label1"
+                text="Employee Name"
+            />
+            <Input
+                id="name"
+                value="{oJsonModel1>/employee/EmployeeName}"
+            />
+
+            <Label
+                id="label2"
+                text="Employee Age"
+            />
+            <Input
+                id="Age"
+                value="{/employee/EmployeeAge}"
+                type="Number"
+            />
+
+            <Label
+                id="label3"
+                text="Contract Started"
+            />
+            <DatePicker value="{/employee/ContractStarted}" />
+
+            <Label
+                id="label4"
+                text="Email"
+            />
+            <Input
+                id="Email"
+                value="{/employee/Email}"
+                type="Email"
+            />
+        </form:SimpleForm>
+    </VBox>
+</mvc:View>
